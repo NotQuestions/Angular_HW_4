@@ -1,0 +1,11 @@
+  <div class="{{user && 'user-main-content' }}">
+    <div>ID: {{user.id}} </div>
+    <div>Name:{{user.name}}</div>
+    <div>UserName:{{user.username}}</div>
+    <div>Email: {{user.email}}</div>
+    <div>Company: {{user.company|json}}</div>
+    <div>Address: {{user.address|json}}</div>
+  </div>
+<!--  {{posts && <div *ngFor="let post of posts">-->
+<!--    {{post|json}}-->
+<!--  </div>}}-->

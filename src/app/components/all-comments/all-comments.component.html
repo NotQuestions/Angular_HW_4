@@ -1,0 +1,12 @@
+<div class="all-comments-main">
+  <div *ngFor="let comment of comments" class="all-comments-main-content">
+    <div>CommentID: {{comment.id}}</div>
+    <div>PostID: {{comment.postId}}</div>
+    <p>Name: {{comment.name}}</p>
+    <p>Email: {{comment.email}}</p>
+    <p>Text: {{comment.body}}</p>
+    <button (click)="DetailsComment(comment)">Details Post</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

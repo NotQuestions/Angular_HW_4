@@ -1,0 +1,10 @@
+<div class="all-posts-main">
+  <div *ngFor="let post of posts" class="all-posts-main-content">
+    <div>ID: {{post.id}}</div>
+    <div>Title: {{post.title}}</div>
+    <p>Text: {{post.body}}</p>
+    <button (click)="toPostDetails(post)">Details Post</button>
+    <button (click)="getCommentsOfPost(post)">get Comments</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

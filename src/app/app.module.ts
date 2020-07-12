@@ -13,6 +13,7 @@ import { PostComponent } from './components/post/post.component';
 import {CommentService} from './service/comment/comment.service';
 import { AllCommentsComponent } from './components/all-comments/all-comments.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { CommentsOfPostComponent } from './components/comments-of-post/comments-of-post.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommentComponent } from './components/comment/comment.component';
     AllPostsComponent,
     PostComponent,
     AllCommentsComponent,
-    CommentComponent
+    CommentComponent,
+    CommentsOfPostComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { CommentComponent } from './components/comment/comment.component';
         component: AllPostsComponent,
         resolve: {postsResol: PostService},
         children: [
-          {path: ':id', component: PostComponent}
+          {path: ':id', component: PostComponent},
+          {path: 'comments/:id', component: CommentsOfPostComponent}
         ]
       },
       {

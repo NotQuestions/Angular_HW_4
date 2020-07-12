@@ -1,0 +1,12 @@
+<div class="all-users-main">
+  <div *ngFor="let user of users" class="all-users-main-content">
+    <div>ID: {{user.id}} </div>
+    <div>Name:{{user.name}}</div>
+    <div>UserName:{{user.username}}</div>
+    <div>Email: {{user.email}}</div>
+    <div>
+      <button (click)="toUserDetails(user)">details</button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
